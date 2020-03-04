@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterationActivity"
+        android:orientation="vertical"
+        android:id="@+id/RegLinearLayout" >
+
+        <include  layout="@layout/toolbar"
+            android:id="@+id/registerToolbar"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:textSize="20dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                app:errorTextAppearance="@style/Widget.MaterialComponents.Snackbar"
+                android:focusableInTouchMode="true"
+                android:focusable="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="20dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:counterMaxLength="6"
+                android:layout_marginTop="10dp"
+                android:focusableInTouchMode="true"
+                android:focusable="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerRollNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Roll No"
+                    android:maxLength="6"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textSize="20dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                android:focusableInTouchMode="true"
+                app:passwordToggleEnabled="true"
+                app:counterMaxLength="10"
+                android:focusable="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="20dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pwdInputLAyout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                app:passwordToggleEnabled="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:textSize="20dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cpwdInputLAyout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                android:focusableInTouchMode="true"
+                app:passwordToggleEnabled="true"
+                android:focusable="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerCPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm Password"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:textSize="20dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/registerbt"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"/>
+
+            <!--<androidx.core.widget.ContentLoadingProgressBar-->
+            <!--android:id="@+id/RegProgressbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:visibility="gone"-->
+            <!--style="@style/Widget.AppCompat.ProgressBar"-->
+            <!--android:max="100"-->
+            <!--android:indeterminate="true"/>-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

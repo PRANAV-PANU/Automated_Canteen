@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewProductActivity">
+
+
+
+    <ImageView
+        android:id="@+id/select_product_image"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_add_image1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/productNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_below="@id/select_product_image"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="20dp"
+        android:focusable="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Name"
+            android:inputType="textMultiLine"
+            android:textSize="20sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ProductPriceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_below="@id/productNameLayout"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="20dp"
+        android:focusable="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Price"
+            android:inputType="textMultiLine"
+            android:textSize="20sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Add_product_details"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:text="Add New Product"
+        android:textStyle="bold|italic"
+        android:layout_below="@id/ProductPriceLayout"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
